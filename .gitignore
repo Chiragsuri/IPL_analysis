@@ -1,1 +1,3 @@
 Dataset/IPL.csv
+.ipynb_checkpoints/
+# Ignore Jupyter Notebook checkpoints

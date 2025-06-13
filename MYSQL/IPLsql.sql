@@ -36,7 +36,7 @@ CREATE TABLE ipl_ball_by_ball (
     wicket_kind VARCHAR(50),
     player_out VARCHAR(100),
     fielders TEXT,
-    runs_target VARCHAR(10),
+    runs_target INT,
     team_reviewed VARCHAR(100),
     review_decision VARCHAR(50),
     player_of_match VARCHAR(100),
@@ -69,7 +69,7 @@ IGNORE 1 ROWS
     bat_pos, @runs_batter, @balls_faced, bowler, @valid_ball, 
     @runs_extra, runs_total, @runs_bowler, @runs_not_boundary, 
     extra_type, @non_striker, @non_striker_pos, wicket_kind, 
-    player_out, fielders, runs_target, @review_batter, 
+    player_out, fielders, @runs_target, @review_batter, 
     team_reviewed, review_decision, @umpire, @umpires_call, 
     player_of_match, match_won_by, win_outcome, toss_winner, 
     toss_decision, venue, city, @day, @month, @year, season, 
@@ -82,6 +82,7 @@ IGNORE 1 ROWS
 SET 
     date = STR_TO_DATE(@date, '%Y-%m-%d'),
     runs_target = NULLIF(@runs_target, ''),
+    runs_extra = NULLIF(@runs_extra, ''),
     runs_batter = NULLIF(@runs_batter, '');
 ;
 
@@ -212,6 +213,10 @@ CREATE OR REPLACE VIEW ipl_match_summary_2024_2025 AS
 SELECT
     match_id,
     MAX(toss_winner) AS toss_winner,
+    MAX(CASE
+        WHEN toss_winner = batting_team THEN bowling_team
+        ELSE batting_team
+    END) AS toss_loser,
     MAX(match_won_by) AS match_won_by,
     MAX(player_of_match) AS player_of_match,
     MAX(season) AS season
