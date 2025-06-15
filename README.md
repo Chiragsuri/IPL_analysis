@@ -92,11 +92,15 @@ Built a multi-page interactive dashboard containing:
 - Team-wise match hosting map
 - Slicers for team and season
 
+<img src="/PowerBi Dashboard/IPLP1.png" alt="Overview">
+
 #### 📄 Page 2: Boundary & Dot Ball Insights
 
 - Total 4s and 6s by team
 - Dot balls bowled per team (per season)
 - Top boundary hitters
+
+<img src="/PowerBi Dashboard/IPLP3.png" alt="Team Performance">
 
 #### 📄 Page 3: Batting Performance
 
@@ -104,10 +108,14 @@ Built a multi-page interactive dashboard containing:
 - Donut: Top 10 boundary hitters
 - KPI cards: Top run scorers, strike rates
 
+<img src="/PowerBi Dashboard/IPLP2.png" alt="Player Performance">
+
 #### 📄 Page 4: Match Behavior
 
 - Review system summary
 - Target range distribution while chasing
+
+<img src="/PowerBi Dashboard/IPLP4.png" alt="Match Flow">
 
 ✔️ Page navigation via buttons (no bookmarks/DAX required)
 
