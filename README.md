@@ -128,7 +128,7 @@ Built a 4-page dashboard with interactivity and visual elements:
 
 ✔️ Page navigation via buttons (no bookmarks/DAX required)
 
-➡️ _Power BI File: [`IPL_Analysis_Dashboard.pbix`](PowerBi_Dashboard/IPL Analysis Dashboard.pbix)_  
+➡️ _Power BI File: [`IPL_Analysis_Dashboard.pbix`](PowerBi_Dashboard/IPL_Analysis_Dashboard.pbix)_  
 🖼️ Published version: [*Add Power BI service link here*]
 
 ---
