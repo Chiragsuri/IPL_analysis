@@ -103,6 +103,8 @@ Built a 4-page dashboard with interactivity and visual elements:
 
 <img src="/PowerBi Dashboard/IPLP1.png" alt="Overview">
 
+<img src="/PowerBi Dashboard/IPLP1.png" alt="Overview">
+
 #### 📄 Page 2: Boundary & Dot Ball Insights
 
 - Total Runs scored by Teams.
@@ -113,6 +115,8 @@ Built a 4-page dashboard with interactivity and visual elements:
 
 <img src="/PowerBi Dashboard/IPLP2.png" alt="Team Performance">
 
+<img src="/PowerBi Dashboard/IPLP3.png" alt="Team Performance">
+
 #### 📄 Page 3: Batting Performance
 
 - Trendline: Batting position vs runs scored.
@@ -120,6 +124,8 @@ Built a 4-page dashboard with interactivity and visual elements:
 - Bar Charts: Top run scorers, wicket takers i.e. Orange and Purple Cap Leaderboard.
 
 <img src="/PowerBi Dashboard/IPLP3.png" alt="Player Performance">
+
+<img src="/PowerBi Dashboard/IPLP2.png" alt="Player Performance">
 
 #### 📄 Page 4: Match Behavior
 
