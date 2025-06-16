@@ -9,14 +9,14 @@ A data-driven project exploring player and team performances across the 2024 and
 - **SQL (MySQL)** – Used for slicing the main IPL dataset into filtered views for the 2024 and 2025 seasons.
 - **Python (pandas, matplotlib, seaborn)** – Exploratory Data Analysis, player performance trends, season-wise insights.
 - **Power BI** – Built a multi-page interactive dashboard with KPIs, slicers, trendlines, and maps.
-- **Generative AI (ChatGPT)** – Assisted in ideation, error handling, SQL optimization, notebook documentation, visual design, and storytelling.
+- **Generative AI (ChatGPT)** – Assisted in ideation, error handling, SQL optimisation, notebook documentation, visual design, and storytelling.
 
 ---
 
 ## 👤 Author
 
 **Chirag Suri**  
-_Passionate about data analysis, dashboards, and a cricket enjoyer._
+_Passionate about data analysis, dashboards, and a cricket enthusiast._
 
 - GitHub: [Link](https://github.com/Chiragsuri)
 - LinkedIn: [Link](https://www.linkedin.com/in/chirag-suri/)
@@ -32,9 +32,7 @@ The project started with a large **IPL Dataset** covering all IPL seasons. Using
 - [`ipl_player_stats_24_25.csv`](Dataset/ipl_player_stats_24_25.csv) – Simplified version to track batter/bowler/wicket actions
 - [`ipl_summary_24_25.csv`](Dataset/ipl_summary_24_25.csv) – Match-level summary (toss winner, result, player of match)
 
-📎 **Original Source**:
-
-[dataset](https://www.kaggle.com/datasets/chaitu20/ipl-dataset2008-2025)
+📎 **Original Source**: [Kaggle](https://www.kaggle.com/datasets/chaitu20/ipl-dataset2008-2025)
 
 ---
 
@@ -42,14 +40,14 @@ The project started with a large **IPL Dataset** covering all IPL seasons. Using
 
 This project wasn’t just about which team won more matches — it was about **uncovering patterns that aren’t obvious casually**, such as:
 
-- How important is the toss — does winning it actually increase win %?
-- Do batting position mattered in scoring runs?
+- How important is the toss — does winning it actually increase win%?
+- Does batting position matter in scoring runs?
 - Which players are consistent but overlooked?
 - How successful are DRS reviews per team?
 - What’s the typical target score range teams face in chases?
 - Which teams are tactically better at bowling dot balls?
 - Do some teams dominate in catches or commit fewer fielding errors?
-- And lastly on which stadium, most IPL matches were played in those seasons?
+- And lastly, in which stadium were most IPL matches played in those seasons?
 
 ---
 
@@ -58,7 +56,7 @@ This project wasn’t just about which team won more matches — it was about **
 ### 🔹 SQL Phase
 
 - Used Filtering methods to create 3 tables from the master IPL dataset.
-- Removed canceled matches and playoff outliers where needed.
+- Removed cancelled matches and playoff outliers where needed.
 - Wrote queries to calculate:
   - Most Runs scored in a Single Match. ['Output'](MYSQL/Exported Query Datasets/most_runs_match.csv)
   - Orange Cap Leaderboard. ['Output'](MYSQL/Exported Query Datasets/orange_cap_25.csv)
@@ -66,7 +64,7 @@ This project wasn’t just about which team won more matches — it was about **
   - Most catches by players. ['Output'](MYSQL/Exported Query Datasets/most_catches_25.csv)
   - Strike Rate of top Batters. ['Output'](MYSQL/Exported Query Datasets/strike_rate_25.csv)
   - Economy Rates of top Bowlers. ['Output'](MYSQL/Exported Query Datasets/economy_rate_25.csv)
-  - Toss-win impact: whether toss winner also won the match. ['Output'](MYSQL/Exported Query Datasets/toss_win_impact.csv)
+  - Toss-win impact: whether the toss winner also won the match. ['Output'](MYSQL/Exported Query Datasets/toss_win_impact.csv)
   - Player of the Match Award tally. ['Output'](MYSQL/Exported Query Datasets/player_of_match.csv)
 
 ➡️ _Script: [`IPLsql.sql`](MYSQL/IPLsql.sql)_
@@ -75,18 +73,18 @@ This project wasn’t just about which team won more matches — it was about **
 
 ### 🔹 Python + Jupyter Notebook Phase
 
-- Loaded the 3 pre-filtered datasets exported from MY SQL Workbench into pandas.
+- Loaded the 3 pre-filtered datasets exported from MySQL Workbench into pandas.
 - Validated datatypes, fixed inconsistencies (e.g., nulls in "runs_target", unknown fields).
 - Season-separated stats and grouped analysis (2024 vs 2025).
-- Built tables and visualizations for:
-  - Team win % (excluding cancelled matches).
+- Built tables and visualisations for:
+  - Team win% (excluding cancelled matches).
   - Catches per team (bar charts).
   - Dot Balls bowled by Each Team (bar charts).
   - Total Boundaries differentiated by number of 4s & 6s. (side-by-side bar charts).
   - Toss-Winner Impact on Match Result (Pie-Charts).
-- Comments + markdowns added to help with storytelling.
+- Comments and markdowns added to enhance storytelling.
 
-➡️ _Notebook: [`IPL Analysis.ipynb`](Python/IPL_Analysis.ipynb)_
+➡️ _Notebook: [`IPL_Analysis.ipynb`](Python/IPL_Analysis.ipynb)_
 
 ---
 
@@ -101,9 +99,7 @@ Built a 4-page dashboard with interactivity and visual elements:
 - Toss Winner v/s Match Winner Donut Chart.
 - Slicers for seasons and teams.
 
-<img src="/PowerBi Dashboard/IPLP1.png" alt="Overview">
-
-<img src="/PowerBi Dashboard/IPLP1.png" alt="Overview">
+<img src="/PowerBi_Dashboard/IPLP1.png" alt="Overview">
 
 #### 📄 Page 2: Boundary & Dot Ball Insights
 
@@ -113,30 +109,26 @@ Built a 4-page dashboard with interactivity and visual elements:
 - Total Catches taken by each team.
 - Slicers for seasons.
 
-<img src="/PowerBi Dashboard/IPLP2.png" alt="Team Performance">
-
-<img src="/PowerBi Dashboard/IPLP3.png" alt="Team Performance">
+<img src="/PowerBi_Dashboard/IPLP2.png" alt="Team Performance">
 
 #### 📄 Page 3: Batting Performance
 
 - Trendline: Batting position vs runs scored.
 - Donut: Top 10 boundary hitters
-- Bar Charts: Top run scorers, wicket takers i.e. Orange and Purple Cap Leaderboard.
+- Bar Charts: Top run scorers, wicket takers, i.e. Orange and Purple Cap Leaderboard.
 
-<img src="/PowerBi Dashboard/IPLP3.png" alt="Player Performance">
+<img src="/PowerBi_Dashboard/IPLP3.png" alt="Player Performance">
 
-<img src="/PowerBi Dashboard/IPLP2.png" alt="Player Performance">
-
-#### 📄 Page 4: Match Behavior
+#### 📄 Page 4: Match Behaviour
 
 - Review system summary
 - Target range distribution while chasing
 
-<img src="/PowerBi Dashboard/IPLP4.png" alt="Match Flow">
+<img src="/PowerBi_Dashboard/IPLP4.png" alt="Match Flow">
 
 ✔️ Page navigation via buttons (no bookmarks/DAX required)
 
-➡️ _Power BI File: [`IPL Analysis Dashboard.pbix`](PowerBi Dashboard/IPL Analysis Dashboard.pbix)_  
+➡️ _Power BI File: [`IPL_Analysis_Dashboard.pbix`](PowerBi_Dashboard/IPL Analysis Dashboard.pbix)_  
 🖼️ Published version: [*Add Power BI service link here*]
 
 ---
@@ -154,14 +146,14 @@ Built a 4-page dashboard with interactivity and visual elements:
 
 ## 💡 Things I Learned
 
-This project taught me a lot — not just about cricket data, but about organizing a full-stack data project from scratch:
+This project taught me a lot — not just about cricket data, but about organising a full-stack data project from scratch:
 
 - How to set up and clean real-world data in SQL.
 - Structuring exploratory analysis in Python before designing visuals.
 - Creating clean, slicer-friendly dashboards in Power BI.
 - Avoiding visual clutter and focusing on **what insights actually matter**.
 - Balancing aesthetics with interactivity (tooltips, maps, dynamic filtering).
-- Using AI tools for efficiency and handling complex task easily.
+- Using AI tools for efficiency and handling complex tasks easily.
 
 ---
 
@@ -170,7 +162,7 @@ This project taught me a lot — not just about cricket data, but about organizi
 If you're checking this project out:
 
 1. You can review the `.sql` file to recreate the database
-2. Use the Jupyter Notebook to experiment or modify visualizations
+2. Use the Jupyter Notebook to experiment or modify visualisations
 3. View the Power BI `.pbix` file directly, or try the online published version
 
 ---
